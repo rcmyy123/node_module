@@ -56,6 +56,6 @@ app.use(errorHandler);
 
 // 启动服务器
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
+app.listen(PORT,'0.0.0.0',() => {
   console.log(`服务器在${process.env.NODE_ENV}模式下运行，端口: ${PORT}`);
 }); 
