@@ -6,7 +6,8 @@ const mongoose = require('mongoose');
 const connectDB = async () => {
   try {
     const conn = await mongoose.connect(process.env.MONGO_URI, {
-      // 这些选项在最新版本的mongoose中已经是默认值，不再需要显式指定
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
     });
 
     console.log(`MongoDB 已连接: ${conn.connection.host}`);

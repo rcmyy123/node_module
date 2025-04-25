@@ -30,7 +30,9 @@ app.use(cors({
   origin: process.env.CLIENT_URL,   // 只允许 .env 里设置的域名访问
   credentials: true
 }));
-app.use(helmet());
+app.use(helmet({
+  contentSecurityPolicy: false, // 为了兼容旧版本，禁用 CSP
+}));
 
 // 日志中间件
 if (process.env.NODE_ENV === 'development') {

@@ -1,5 +1,5 @@
 const Product = require('../models/productModel');
-const asyncHandler = require('../utils/asyncHandler');
+const asyncHandler = require('express-async-handler');
 
 /**
  * 获取所有产品
